@@ -5,3 +5,28 @@ the Car class: myCar1 with a specified make and model, and myCar2 with null valu
 instantiation, the CarTester class should retrieve and print the initial make and model of both 
 cars. Then, it should set new values for myCar2 using setter methods and print the updated 
 make and model.*/ 
+
+public class Car {
+private String make;
+private String model;
+public Car(String make,String model) {
+	this.make=make;
+	this.model=model;
+}
+public void setter(String make,String model) {
+	this.make=make;
+	this.model=model;
+}
+public void getter() {
+	System.out.println("The car is the make of "+make+" of model "+model );
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Car myCar1=new Car("Honda","City");
+myCar1.getter();
+Car myCar2=new Car(null,null);
+myCar2.setter("Tata","Punch");
+myCar2.getter();
+	}
+
+}
