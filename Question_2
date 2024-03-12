@@ -1,0 +1,36 @@
+/*Q2. Design a Java class called Rectangle with private attributes length and width. Include a 
+constructor to initialize these attributes, as well as setter and getter methods for each attribute. 
+Additionally, implement methods to calculate the area and perimeter of the rectangle. Write a 
+main method to create an object of the Rectangle class, set values for its attributes, and display 
+the area and perimeter. */
+public class Rectangle {
+private int length;
+private int weidth;
+public Rectangle(int length,int weidth) {
+	this.length= length;
+	this.weidth=weidth;
+	
+}public void Setsides(int length,int weidth) {
+	this.length= length;
+	this.weidth=weidth;
+}
+public int getArea() {
+	return length*weidth;
+}
+public int getPerimeter() {
+	return 2*(length+weidth);
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Rectangle R1 =new Rectangle(4,3);
+System.out.println("For Rectangle '1'----------------------------------");
+System.out.println("The area  is     : "+R1.getArea());
+System.out.println("The perimeter is : "+R1.getPerimeter());
+System.out.println("For Rectangle '2'-----------------------------------");
+Rectangle R2 =new Rectangle(0,0);
+R2.Setsides(9, 5);
+System.out.println("The area is      : "+R2.getArea());
+System.out.println("The perimeter is : "+R2.getPerimeter());
+	}
+
+}
